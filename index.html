@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FunesByte — Desarrollo de Software · Funes, Santa Fe</title>
+  <meta name="description" content="Agencia de desarrollo de software en Funes, Santa Fe, Argentina. Aplicaciones web, sistemas a medida, landing pages y blogs para emprendedores y empresas." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://funesbyte.com/" />
+  <meta name="theme-color" content="#0b0d17" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://funesbyte.com/" />
+  <meta property="og:title" content="FunesByte — Desarrollo de Software" />
+  <meta property="og:description" content="Convertimos ideas en productos digitales que funcionan. Aplicaciones web, sistemas a medida y más. Funes, Santa Fe, Argentina." />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="FunesByte" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FunesByte — Desarrollo de Software" />
+  <meta name="twitter:description" content="Convertimos ideas en productos digitales que funcionan." />
+
+  <!-- Resource hints -->
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data — ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "FunesByte",
+    "url": "https://funesbyte.com",
+    "email": "funesbyte@gmail.com",
+    "description": "Agencia de desarrollo de software especializada en aplicaciones web, sistemas a medida, landing pages y blogs. Funes, Santa Fe, Argentina.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Funes",
+      "addressRegion": "Santa Fe",
+      "addressCountry": "AR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Ignacio D. López",
+      "jobTitle": "Fundador & Lead Developer",
+      "url": "https://www.ignaciodlopez.com",
+      "sameAs": [
+        "https://linkedin.com/in/ignaciolopez",
+        "https://github.com/ignaciodlopez"
+      ]
+    },
+    "knowsAbout": ["PHP", "Laravel", "Symfony", "C#", ".NET", "MySQL", "MongoDB", "Desarrollo Web"],
+    "areaServed": "Argentina",
+    "inLanguage": "es"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span class="brand-text">FunesByte</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary ms-lg-4">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="contenido-principal">
+
+  <!-- HERO -->
+  <section class="hero d-flex align-items-center" id="inicio">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <p class="hero-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> Funes, Santa Fe, Argentina</p>
+          <h1 class="hero-title">
+            Desarrollo de software<br />
+            y soluciones digitales<br />
+            <span class="text-gradient">a tu medida</span>
+          </h1>
+          <p class="hero-sub">
+            Trabajamos con personas, emprendedores y empresas para
+            convertir ideas en productos digitales que funcionan.
+          </p>
+          <div class="d-flex gap-3 flex-wrap mt-5">
+            <a href="#contacto" class="btn btn-primary btn-lg px-4">Hablemos de tu proyecto</a>
+            <a href="#servicios" class="btn btn-outline-light btn-lg px-4">Ver servicios</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-end" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="file-name">ProjectController.php</span>
+              <div class="code-actions">
+                <span class="code-action win-min" title="Minimizar"><i class="bi bi-dash"></i></span>
+                <span class="code-action win-max" title="Maximizar"><i class="bi bi-square"></i></span>
+                <span class="code-action win-close" title="Cerrar"><i class="bi bi-x"></i></span>
+              </div>
+            </div>
+            <pre class="code-body"><span class="c-purple">namespace</span> <span class="c-yellow">App\Http\Controllers</span><span class="c-white">;</span>
+
+<span class="c-purple">class</span> <span class="c-yellow">ProjectController</span>
+<span class="c-white">{</span>
+  <span class="c-purple">public function</span> <span class="c-blue">deploy</span><span class="c-white">(</span><span class="c-yellow">Project</span> <span class="c-blue">$p</span><span class="c-white">)</span>
+  <span class="c-white">{</span>
+    <span class="c-blue">$p</span><span class="c-white">-></span><span class="c-blue">markAsLive</span><span class="c-white">();</span>
+    <span class="c-blue">event</span><span class="c-white">(</span><span class="c-purple">new</span> <span class="c-yellow">ProjectDeployed</span><span class="c-white">(</span><span class="c-blue">$p</span><span class="c-white">));</span>
+
+    <span class="c-purple">return</span> <span class="c-blue">response</span><span class="c-white">()-></span><span class="c-blue">json</span><span class="c-white">([</span>
+      <span class="c-green">'status'</span> <span class="c-white">=></span> <span class="c-green">'deployed'</span><span class="c-white">,</span>
+      <span class="c-green">'url'</span>    <span class="c-white">=></span> <span class="c-blue">$p</span><span class="c-white">-></span><span class="c-blue">production_url</span><span class="c-white">,</span>
+    <span class="c-white">]);</span>
+  <span class="c-white">}</span>
+<span class="c-white">}</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="values-bar" aria-label="Propuesta de valor">
+    <div class="container">
+      <div class="row g-0">
+        <div class="col-md-4 value-item">
+          <div class="value-icon" aria-hidden="true"><i class="bi bi-calendar-check"></i></div>
+          <div class="value-body">
+            <h6>Plazos que se cumplen</h6>
+            <p>No prometemos lo que no podemos cumplir. Si algo cambia, te avisamos antes de que sea un problema.</p>
+          </div>
+        </div>
+        <div class="col-md-4 value-item">
+          <div class="value-icon" aria-hidden="true"><i class="bi bi-code-slash"></i></div>
+          <div class="value-body">
+            <h6>Código que dura</h6>
+            <p>Entregamos código limpio y mantenible. El mismo que querríamos heredar si fuéramos el siguiente dev.</p>
+          </div>
+        </div>
+        <div class="col-md-4 value-item">
+          <div class="value-icon" aria-hidden="true"><i class="bi bi-headset"></i></div>
+          <div class="value-body">
+            <h6>Presentes en cada etapa</h6>
+            <p>Desde la elección de la tecnología hasta la implementación, estamos para orientarte y acompañarte en el proceso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <span class="section-tag">Servicios</span>
+          <h2 class="section-title">Lo que hacemos</h2>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-window-stack"></i></div>
+          <h4>Desarrollo Web</h4>
+          <p>Aplicaciones web a medida, desde un MVP que necesita salir rápido hasta un sistema que tiene que escalar. Trabajamos con PHP, Laravel y frameworks modernos.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-file-earmark-richtext"></i></div>
+          <h4>Blogs</h4>
+          <p>Blogs funcionales, rápidos y fáciles de administrar. Con panel propio o integrado a tu sitio existente.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-layout-text-window"></i></div>
+          <h4>Landing Pages</h4>
+          <p>Páginas de conversión bien diseñadas, rápidas y optimizadas para captar clientes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></div>
+          <h4>Sistemas a Medida</h4>
+          <p>Software específico para tu negocio. El tipo de herramienta que no encontrás lista en el mercado. Desde gestión interna hasta ERPs livianos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section section-dark" id="proyectos">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <span class="section-tag">Proyectos</span>
+          <h2 class="section-title">Algunos trabajos</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="img/POS.png" alt="Captura de pantalla del sistema FunesPOS" loading="lazy" width="600" height="340" />
+            </div>
+            <div class="project-body">
+              <h5>FunesPOS</h5>
+              <p>Sistema de punto de venta para kioscos, ferreterías, almacenes y negocios de retail. Con modo offline y PWA.</p>
+              <a href="funespos.html" class="project-link">Ver producto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://s0.wp.com/mshots/v1/https://www.funesya.com.ar/?w=600&h=340" alt="Captura del sitio FunesYa" loading="lazy" width="600" height="340" />
+            </div>
+            <div class="project-body">
+              <h5>FunesYa</h5>
+              <p>Reúne noticias de múltiples medios locales de Funes, Santa Fe, en un solo lugar.</p>
+              <a href="https://www.funesya.com.ar/" target="_blank" rel="noopener noreferrer" class="project-link">Ver proyecto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-img">
+              <img src="https://s0.wp.com/mshots/v1/https://www.observatoriocomex.org/?w=600&h=340" alt="Captura del sitio Observatorio de Comercio Exterior PyME" loading="lazy" width="600" height="340" />
+            </div>
+            <div class="project-body">
+              <h5>Observatorio de Comercio Exterior PyME</h5>
+              <p>Plataforma de análisis y difusión de datos sobre comercio internacional para la CAECS-UAI de Rosario.</p>
+              <a href="https://www.observatoriocomex.org/" target="_blank" rel="noopener noreferrer" class="project-link">Ver proyecto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section section-dark" id="nosotros">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <span class="section-tag">Nosotros</span>
+          <h2 class="section-title">Soluciones de software<br />que resuelven problemas reales</h2>
+          <p class="about-text mt-4">
+            En FunesByte nos enfocamos en entender el problema antes de proponer
+            una solución. No vendemos tecnología, vendemos resultados.
+          </p>
+          <p class="about-text mt-3">
+            Trabajamos con empresas y emprendedores que necesitan software
+            que funcione, que escale y que sea fácil de mantener. Sin vueltas,
+            sin promesas que después no se cumplen.
+          </p>
+          <div class="about-stack mt-4">
+            <span class="about-tag"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Funes, Santa Fe</span>
+            <span class="about-tag"><i class="bi bi-translate" aria-hidden="true"></i> Español / Inglés</span>
+            <span class="about-tag"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Lic. en Tecnologías de la Información</span>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="team-card">
+            <div class="team-info">
+              <h5>Ignacio D. López</h5>
+              <p class="team-bio">
+                Desarrollador de software especializado en PHP con Laravel y Symfony.
+                Técnico en Desarrollo de Software y Licenciado en Tecnologías de la Información.
+                Apasionado por construir soluciones reales que funcionen.
+              </p>
+              <div class="team-links mt-3">
+                <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Ignacio López"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Ignacio López"><i class="bi bi-github" aria-hidden="true"></i></a>
+                <a href="https://www.ignaciodlopez.com" target="_blank" rel="noopener noreferrer" aria-label="Sitio personal de Ignacio López"><i class="bi bi-globe2" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section class="section" id="tecnologias">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <span class="section-tag">Stack</span>
+          <h2 class="section-title">Con qué trabajamos</h2>
+          <p class="section-sub mt-2">
+            Tecnologías con las que trabajamos de forma habitual en nuestros proyectos.
+          </p>
+        </div>
+      </div>
+      <div class="tech-icon-grid">
+        <div class="tech-icon-card">
+          <i class="devicon-php-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">PHP</span>
+          <span class="tech-icon-sub">Laravel · Symfony</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-javascript-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">JavaScript</span>
+          <span class="tech-icon-sub">&nbsp;</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-html5-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">HTML5 / CSS3</span>
+          <span class="tech-icon-sub">Bootstrap</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-csharp-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">C#</span>
+          <span class="tech-icon-sub">.NET</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-mysql-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">MySQL</span>
+          <span class="tech-icon-sub">&nbsp;</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-microsoftsqlserver-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">SQL Server</span>
+          <span class="tech-icon-sub">&nbsp;</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-mongodb-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">MongoDB</span>
+          <span class="tech-icon-sub">&nbsp;</span>
+        </div>
+        <div class="tech-icon-card">
+          <i class="devicon-git-plain colored tech-icon-i" aria-hidden="true"></i>
+          <span class="tech-icon-name">Git</span>
+          <span class="tech-icon-sub">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section section-dark" id="proceso">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12">
+          <span class="section-tag">Proceso</span>
+          <h2 class="section-title">Cómo trabajamos</h2>
+          <p class="section-sub mt-2">Sin metodologías inventadas. Un proceso directo que funciona.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-dot" aria-hidden="true">01</div>
+          <div class="timeline-content">
+            <h5>Escuchamos</h5>
+            <p>Antes de proponer nada, entendemos tu negocio, el problema real y qué esperás del proyecto.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot" aria-hidden="true">02</div>
+          <div class="timeline-content">
+            <h5>Definimos</h5>
+            <p>Alcance, plazos y costos acordados por escrito. Nada de estimaciones vagas que después cambian.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot" aria-hidden="true">03</div>
+          <div class="timeline-content">
+            <h5>Construimos</h5>
+            <p>Entregamos avances cada semana. Podés ver el progreso real, no una presentación.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot" aria-hidden="true">04</div>
+          <div class="timeline-content">
+            <h5>Lanzamos</h5>
+            <p>Desplegamos nosotros. Monitoreamos el arranque y estamos disponibles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <span class="section-tag">Contacto</span>
+          <h2 class="section-title mt-2">¿Tenés un proyecto?<br />Escribinos.</h2>
+          <p class="section-sub mb-5" style="margin: 0.75rem auto 0;">
+            Contanos qué necesitás. Si podemos ayudarte, te lo decimos.
+            Si no, también.
+          </p>
+          <div class="contact-card">
+            <form class="row g-3" id="contactForm" action="https://formspree.io/f/xjgdygqb" method="POST">
+              <div class="col-md-6">
+                <label for="contact-name" class="visually-hidden">Tu nombre</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Tu nombre" required autocomplete="name" />
+              </div>
+              <div class="col-md-6">
+                <label for="contact-email" class="visually-hidden">Tu email</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="Tu email" required autocomplete="email" />
+              </div>
+              <div class="col-12">
+                <label for="contact-project" class="visually-hidden">¿De qué se trata el proyecto?</label>
+                <input type="text" id="contact-project" name="project" class="form-control" placeholder="¿De qué se trata el proyecto?" required />
+              </div>
+              <div class="col-12">
+                <label for="contact-details" class="visually-hidden">Más detalles</label>
+                <textarea id="contact-details" name="details" class="form-control" rows="4" placeholder="Más detalles: presupuesto, urgencia, referencias..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                  Enviar mensaje <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="contact-links mt-5">
+            <a href="mailto:funesbyte@gmail.com"><i class="bi bi-envelope-fill" aria-hidden="true"></i> funesbyte@gmail.com</a>
+            <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a>
+            <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="brand-text">FunesByte</span>
+        </div>
+        <div class="col-md-4 text-center my-3 my-md-0">
+          <p class="mb-0 text-muted small">© 2026 FunesByte · Funes, Santa Fe, Argentina</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="privacidad.html" class="footer-link">Privacidad</a>
+          <a href="terminos.html" class="footer-link ms-3">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
