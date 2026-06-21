@@ -1,19 +1,18 @@
 // ============================================================
-// FunesByte — Main Script
+// FunesPOS — Script
 // ============================================================
 
-// ---- NAVBAR: scroll effect ----
-const navbar        = document.getElementById('navbar');
-const mobileBtn     = document.getElementById('mobile-menu-btn');
-const mobileMenu    = document.getElementById('mobile-menu');
-const mobileLinks   = document.querySelectorAll('.mobile-link, .mobile-cta');
+// ---- NAVBAR scroll ----
+const navbar    = document.getElementById('pos-navbar');
+const mobileBtn = document.getElementById('pos-mobile-btn');
+const mobileMenu = document.getElementById('pos-mobile-menu');
 
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
+  navbar.classList.toggle('scrolled', window.scrollY > 30);
 }, { passive: true });
 
 // ---- MOBILE MENU ----
-function closeMobileMenu() {
+function closeMobile() {
   mobileMenu.classList.add('hidden');
   mobileBtn.setAttribute('aria-expanded', 'false');
   mobileBtn.querySelector('i').className = 'bi bi-list';
@@ -22,7 +21,7 @@ function closeMobileMenu() {
 mobileBtn.addEventListener('click', () => {
   const isOpen = !mobileMenu.classList.contains('hidden');
   if (isOpen) {
-    closeMobileMenu();
+    closeMobile();
   } else {
     mobileMenu.classList.remove('hidden');
     mobileBtn.setAttribute('aria-expanded', 'true');
@@ -30,32 +29,16 @@ mobileBtn.addEventListener('click', () => {
   }
 });
 
-mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+document.querySelectorAll('.pos-mobile-link, .pos-mobile-cta').forEach(l =>
+  l.addEventListener('click', closeMobile)
+);
 
-// Close on outside click
 document.addEventListener('click', (e) => {
-  if (!navbar.contains(e.target)) closeMobileMenu();
+  if (!navbar.contains(e.target)) closeMobile();
 });
 
-// ---- ACTIVE NAV LINK ----
-const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nav-link');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-      });
-    }
-  });
-}, { threshold: 0.3, rootMargin: '-80px 0px -30% 0px' });
-
-sections.forEach(s => sectionObserver.observe(s));
-
-// ---- FADE-IN ON SCROLL ----
+// ---- FADE IN ----
 const fadeEls = document.querySelectorAll('.fade-in');
-
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -68,13 +51,12 @@ const fadeObserver = new IntersectionObserver((entries) => {
 fadeEls.forEach(el => fadeObserver.observe(el));
 
 // ---- CONTACT FORM ----
-const form      = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
+const form      = document.getElementById('posContactForm');
+const submitBtn = document.getElementById('pos-submit');
 
 if (form && submitBtn) {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
-
     const originalHTML = submitBtn.innerHTML;
     submitBtn.innerHTML = '<span style="opacity:.7">Enviando...</span>';
     submitBtn.disabled = true;
@@ -85,13 +67,12 @@ if (form && submitBtn) {
         body: new FormData(this),
         headers: { 'Accept': 'application/json' }
       });
-
       if (res.ok) {
-        submitBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> ¡Mensaje enviado!';
+        submitBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> ¡Listo! Te contactamos pronto.';
         submitBtn.style.background = '#16a34a';
         form.reset();
       } else {
-        throw new Error('Server error');
+        throw new Error();
       }
     } catch {
       submitBtn.innerHTML = '<i class="bi bi-exclamation-triangle-fill"></i> Error al enviar. Intentá de nuevo.';

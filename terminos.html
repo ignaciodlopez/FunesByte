@@ -1,81 +1,211 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Términos y Condiciones — FunesByte</title>
-  <meta name="robots" content="noindex" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Términos y condiciones de contratación de servicios de FunesByte.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#7C3AED">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: {
+              50:  '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8B5CF6',
+              600: '#7C3AED',
+              700: '#6D28D9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+            }
+          },
+          boxShadow: {
+            'brand-sm': '0 4px 16px rgba(124,58,237,0.18)',
+            'brand':    '0 8px 30px rgba(124,58,237,0.25)',
+            'brand-lg': '0 16px 50px rgba(124,58,237,0.3)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    .legal-page { max-width: 720px; margin: 0 auto; padding: 7rem 2rem 5rem; }
-    .legal-page h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -1.5px; color: #fff; margin-bottom: 0.5rem; }
-    .legal-date { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 3rem; display: block; }
-    .legal-page h2 { font-size: 1rem; font-weight: 700; color: #fff; margin: 2.5rem 0 0.75rem; }
-    .legal-page p, .legal-page li { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.85; }
-    .legal-page ul { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.5rem; }
-    .legal-back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 500; color: var(--primary); text-decoration: none; margin-bottom: 2.5rem; transition: gap 0.2s; }
-    .legal-back:hover { gap: 0.65rem; color: var(--primary); }
-    hr.legal-divider { border: none; border-top: 1px solid var(--border-light); margin: 2rem 0; }
+    .legal-content { color: #475569; line-height: 1.8; }
+    .legal-content h2 { font-size: 1.1rem; font-weight: 700; color: #1e1b4b; margin-top: 2.25rem; margin-bottom: 0.6rem; }
+    .legal-content p { margin-bottom: 0.75rem; }
+    .legal-content ul { padding-left: 1.5rem; margin-bottom: 0.75rem; list-style: disc; }
+    .legal-content li { margin-bottom: 0.25rem; }
+    .legal-content a { color: #7C3AED; text-decoration: underline; }
+    .legal-content strong { color: #1e1b4b; }
+    hr.legal-divider { border: none; border-top: 1px solid #e2e8f0; margin: 2.5rem 0; }
   </style>
 </head>
-<body>
-  <main class="legal-page">
+<body class="font-sans bg-white text-slate-900 antialiased overflow-x-hidden">
 
-    <a href="index.html" class="legal-back">← Volver a FunesByte</a>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="FunesByte — Inicio">
+          <div class="nav-logo-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">FunesByte</span>
+        </a>
 
-    <span class="section-tag">Legal</span>
-    <h1>Términos y Condiciones</h1>
-    <span class="legal-date">Última actualización: junio de 2026</span>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html#inicio"      class="nav-link">Inicio</a></li>
+          <li><a href="index.html#servicios"   class="nav-link">Servicios</a></li>
+          <li><a href="index.html#tecnologias" class="nav-link">Tecnologías</a></li>
+          <li><a href="index.html#proyectos"   class="nav-link">Proyectos</a></li>
+          <li><a href="index.html#nosotros"    class="nav-link">Nosotros</a></li>
+          <li><a href="index.html#contacto"    class="nav-link">Contacto</a></li>
+        </ul>
 
-    <p>Al contratar servicios de FunesByte o usar cualquiera de nuestros productos, aceptás los siguientes términos. Si tenés alguna duda antes de avanzar, escribinos.</p>
+        <div class="nav-actions">
+          <a href="index.html#contacto" class="btn-primary-sm">Solicitar Cotización</a>
+          <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="bi bi-list" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
 
-    <h2>1. Servicios</h2>
-    <p>FunesByte ofrece servicios de desarrollo de software a medida, incluyendo aplicaciones web, sistemas de gestión, landing pages y blogs. Cada proyecto se define mediante un acuerdo escrito que especifica alcance, plazos y costos antes de comenzar el trabajo.</p>
+      <div id="mobile-menu" class="mobile-menu hidden" role="dialog" aria-label="Menú de navegación">
+        <a href="index.html#inicio"      class="mobile-link">Inicio</a>
+        <a href="index.html#servicios"   class="mobile-link">Servicios</a>
+        <a href="index.html#tecnologias" class="mobile-link">Tecnologías</a>
+        <a href="index.html#proyectos"   class="mobile-link">Proyectos</a>
+        <a href="index.html#nosotros"    class="mobile-link">Nosotros</a>
+        <a href="index.html#contacto"    class="mobile-link">Contacto</a>
+        <a href="index.html#contacto"    class="mobile-cta">Solicitar Cotización</a>
+      </div>
+    </div>
+  </nav>
 
-    <h2>2. Presupuestos y pagos</h2>
-    <p>Los presupuestos son válidos por 15 días desde su emisión. La modalidad de pago habitual es:</p>
-    <ul>
-      <li>50% al inicio del proyecto para confirmar la reserva</li>
-      <li>50% restante al finalizar y antes de la entrega en producción</li>
-    </ul>
-    <p>Para proyectos de mayor duración, se puede acordar un esquema de pagos por etapas. Todo queda por escrito antes de arrancar.</p>
+  <main id="contenido-principal">
+    <section class="py-section bg-white" style="padding-top: 8rem;">
+      <div class="section-container" style="max-width: 760px;">
 
-    <h2>3. Plazos</h2>
-    <p>Los plazos estimados se indican en el acuerdo inicial. Cualquier modificación de alcance acordada durante el proyecto puede afectar los tiempos. Te avisamos con anticipación si surge algún desvío.</p>
+        <div class="fade-in" style="margin-bottom: 2.5rem;">
+          <a href="index.html" class="text-link" style="font-size: 0.9rem;">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i> Volver al inicio
+          </a>
+          <span class="section-tag" style="display:block; margin-top: 1.5rem;">Legal</span>
+          <h1 class="section-title mt-3">Términos y Condiciones</h1>
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 0.5rem;">Última actualización: junio de 2026</p>
+        </div>
 
-    <h2>4. Propiedad intelectual</h2>
-    <p>Una vez abonado el proyecto en su totalidad, el código desarrollado específicamente para vos es de tu propiedad. Las herramientas, librerías y frameworks de terceros utilizados mantienen sus respectivas licencias originales.</p>
-    <p>FunesByte se reserva el derecho de mencionar el proyecto en su portfolio, salvo que se acuerde confidencialidad por escrito.</p>
+        <div class="fade-in legal-content">
 
-    <h2>5. Soporte y mantenimiento</h2>
-    <p>El soporte post-entrega incluye corrección de errores directamente relacionados con el desarrollo durante los primeros 30 días sin costo adicional. Fuera de ese período, el soporte y las nuevas funcionalidades se cotizarán por separado.</p>
+          <p>Al contratar servicios de FunesByte o usar cualquiera de nuestros productos, aceptás los siguientes términos. Si tenés alguna duda antes de avanzar, escribinos.</p>
 
-    <h2>6. Limitación de responsabilidad</h2>
-    <p>FunesByte no se responsabiliza por pérdidas derivadas del uso del software en situaciones no previstas en el alcance original, ni por interrupciones de servicio ocasionadas por terceros (hosting, proveedores de email, APIs externas, etc.).</p>
+          <h2>1. Servicios</h2>
+          <p>FunesByte ofrece servicios de desarrollo de software a medida, incluyendo aplicaciones web, sistemas de gestión, landing pages y blogs. Cada proyecto se define mediante un acuerdo escrito que especifica alcance, plazos y costos antes de comenzar el trabajo.</p>
 
-    <h2>7. Cancelación</h2>
-    <p>Si el cliente decide cancelar el proyecto luego de iniciado el trabajo, el adelanto abonado no es reembolsable. Se puede acordar una liquidación parcial según el avance real del trabajo.</p>
+          <h2>2. Presupuestos y pagos</h2>
+          <p>Los presupuestos son válidos por 15 días desde su emisión. La modalidad de pago habitual es:</p>
+          <ul>
+            <li>50% al inicio del proyecto para confirmar la reserva</li>
+            <li>50% restante al finalizar y antes de la entrega en producción</li>
+          </ul>
+          <p>Para proyectos de mayor duración, se puede acordar un esquema de pagos por etapas. Todo queda por escrito antes de arrancar.</p>
 
-    <h2>8. Jurisdicción</h2>
-    <p>Ante cualquier controversia, las partes se someten a la jurisdicción de los tribunales ordinarios de la ciudad de Rosario, Santa Fe, Argentina.</p>
+          <h2>3. Plazos</h2>
+          <p>Los plazos estimados se indican en el acuerdo inicial. Cualquier modificación de alcance acordada durante el proyecto puede afectar los tiempos. Te avisamos con anticipación si surge algún desvío.</p>
 
-    <hr class="legal-divider" />
-    <p>¿Tenés preguntas sobre estos términos? Escribinos a <a href="mailto:funesbyte@gmail.com" style="color: var(--primary);">funesbyte@gmail.com</a>.</p>
+          <h2>4. Propiedad intelectual</h2>
+          <p>Una vez abonado el proyecto en su totalidad, el código desarrollado específicamente para vos es de tu propiedad. Las herramientas, librerías y frameworks de terceros utilizados mantienen sus respectivas licencias originales.</p>
+          <p>FunesByte se reserva el derecho de mencionar el proyecto en su portfolio, salvo que se acuerde confidencialidad por escrito.</p>
 
+          <h2>5. Soporte y mantenimiento</h2>
+          <p>El soporte post-entrega incluye corrección de errores directamente relacionados con el desarrollo durante los primeros 30 días sin costo adicional. Fuera de ese período, el soporte y las nuevas funcionalidades se cotizarán por separado.</p>
+
+          <h2>6. Limitación de responsabilidad</h2>
+          <p>FunesByte no se responsabiliza por pérdidas derivadas del uso del software en situaciones no previstas en el alcance original, ni por interrupciones de servicio ocasionadas por terceros (hosting, proveedores de email, APIs externas, etc.).</p>
+
+          <h2>7. Cancelación</h2>
+          <p>Si el cliente decide cancelar el proyecto luego de iniciado el trabajo, el adelanto abonado no es reembolsable. Se puede acordar una liquidación parcial según el avance real del trabajo.</p>
+
+          <h2>8. Jurisdicción</h2>
+          <p>Ante cualquier controversia, las partes se someten a la jurisdicción de los tribunales ordinarios de la ciudad de Rosario, Santa Fe, Argentina.</p>
+
+          <hr class="legal-divider">
+          <p>¿Tenés preguntas sobre estos términos? Escribinos a <a href="mailto:funesbyte@gmail.com">funesbyte@gmail.com</a>.</p>
+
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-      <span class="brand-text">FunesByte</span>
-      <p class="mb-0 small" style="color:rgba(255,255,255,0.45);">© 2026 FunesByte · Funes, Santa Fe, Argentina</p>
-      <div>
-        <a href="privacidad.html" class="footer-link">Privacidad</a>
-        <a href="terminos.html" class="footer-link" style="margin-left:1rem;">Términos</a>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="section-container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="FunesByte — Inicio">
+          <div class="nav-logo-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="footer-logo-text">FunesByte</span>
+        </a>
+        <p class="footer-desc">Empresa de desarrollo de software a medida. Creamos soluciones tecnológicas escalables que impulsan el crecimiento de tu negocio.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del footer">
+        <h5 class="footer-nav-title">Navegación</h5>
+        <ul>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#tecnologias">Tecnologías</a></li>
+          <li><a href="index.html#proyectos">Proyectos</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h5 class="footer-nav-title">Contacto</h5>
+        <ul>
+          <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:funesbyte@gmail.com">funesbyte@gmail.com</a></li>
+          <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Funes, Santa Fe, Argentina</span></li>
+          <li><i class="bi bi-whatsapp" aria-hidden="true"></i><a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="section-container footer-bottom-inner">
+        <p>© 2026 FunesByte · Todos los derechos reservados · Funes, Santa Fe, Argentina</p>
+        <div class="footer-legal">
+          <a href="privacidad.html">Privacidad</a>
+          <a href="terminos.html">Términos</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
