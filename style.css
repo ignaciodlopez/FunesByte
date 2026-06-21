@@ -58,21 +58,21 @@ body::after {
   letter-spacing: -0.75px;
 }
 
-.nav-link {
-  color: rgba(255,255,255,0.5) !important;
+.navbar .nav-link {
+  color: rgba(255,255,255,0.5);
   font-size: 0.875rem;
   font-weight: 500;
   transition: color 0.2s;
   position: relative;
 }
 
-.nav-link:hover { color: #fff !important; }
+.navbar .nav-link:hover { color: #fff; }
 
-.nav-link.active {
-  color: #fff !important;
+.navbar .nav-link.active {
+  color: #fff;
 }
 
-.nav-link.active::after {
+.navbar .nav-link.active::after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -355,6 +355,10 @@ body::after {
   color: rgba(255,255,255,0.4);
   line-height: 1.8;
   max-width: 400px;
+}
+
+.section-sub--contact {
+  margin: 0.75rem auto 0;
 }
 
 /* ---- SERVICE CARDS — bento grid ---- */
@@ -881,8 +885,8 @@ body::after {
   opacity: 0.3;
 }
 
-.footer .text-muted {
-  color: rgba(255,255,255,0.45) !important;
+.footer p.text-muted {
+  color: rgba(255,255,255,0.45);
 }
 
 .footer-link {

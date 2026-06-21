@@ -24,7 +24,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach(s => sectionObserver.observe(s));
 
 // Contact form — Formspree submission
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
   e.preventDefault();
   const btn = this.querySelector('button[type=submit]');
   const originalHTML = btn.innerHTML;
