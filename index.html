@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,44 +26,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Devicon (logos de tecnologías) -->
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            brand: {
-              50:  '#f5f3ff',
-              100: '#ede9fe',
-              200: '#ddd6fe',
-              300: '#c4b5fd',
-              400: '#a78bfa',
-              500: '#8B5CF6',
-              600: '#7C3AED',
-              700: '#6D28D9',
-              800: '#5b21b6',
-              900: '#4c1d95',
-            }
-          },
-          boxShadow: {
-            'brand-sm': '0 4px 16px rgba(124,58,237,0.18)',
-            'brand':    '0 8px 30px rgba(124,58,237,0.25)',
-            'brand-lg': '0 16px 50px rgba(124,58,237,0.3)',
-          }
-        }
-      }
-    }
-  </script>
 
   <link rel="stylesheet" href="style.css">
 
@@ -96,50 +63,48 @@
   }
   </script>
 </head>
-<body class="font-sans bg-white text-slate-900 antialiased overflow-x-hidden">
+<body>
+
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar" aria-label="Navegación principal">
     <div class="nav-container">
       <div class="nav-inner">
 
-        <!-- Logo -->
         <a href="#inicio" class="nav-logo" aria-label="FunesByte — Inicio">
-          <div class="nav-logo-icon">
+          <span class="nav-logo-icon">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </div>
+          </span>
           <span class="nav-logo-text">FunesByte</span>
         </a>
 
-        <!-- Desktop nav -->
         <ul class="nav-links" role="list">
-          <li><a href="#inicio"      class="nav-link">Inicio</a></li>
-          <li><a href="#servicios"   class="nav-link">Servicios</a></li>
-          <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
-          <li><a href="#proyectos"   class="nav-link">Proyectos</a></li>
-          <li><a href="#nosotros"    class="nav-link">Nosotros</a></li>
-          <li><a href="#contacto"    class="nav-link">Contacto</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#producto"  class="nav-link">Producto</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#nosotros"  class="nav-link">Nosotros</a></li>
+          <li><a href="#faq"       class="nav-link">FAQ</a></li>
         </ul>
 
         <div class="nav-actions">
-          <a href="#contacto" class="btn-primary-sm">Solicitar Cotización</a>
+          <a href="#contacto" class="btn-primary-sm">Hablemos</a>
           <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-            <i class="bi bi-list" aria-hidden="true"></i>
+            <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            <svg class="icon icon-close hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile menu -->
       <div id="mobile-menu" class="mobile-menu hidden" role="dialog" aria-label="Menú de navegación">
-        <a href="#inicio"      class="mobile-link">Inicio</a>
-        <a href="#servicios"   class="mobile-link">Servicios</a>
-        <a href="#tecnologias" class="mobile-link">Tecnologías</a>
-        <a href="#proyectos"   class="mobile-link">Proyectos</a>
-        <a href="#nosotros"    class="mobile-link">Nosotros</a>
-        <a href="#contacto"    class="mobile-link">Contacto</a>
-        <a href="#contacto"    class="mobile-cta">Solicitar Cotización</a>
+        <a href="#servicios" class="mobile-link">Servicios</a>
+        <a href="#producto"  class="mobile-link">Producto</a>
+        <a href="#proyectos" class="mobile-link">Proyectos</a>
+        <a href="#nosotros"  class="mobile-link">Nosotros</a>
+        <a href="#faq"       class="mobile-link">FAQ</a>
+        <a href="#contacto"  class="mobile-cta">Hablemos de tu proyecto</a>
       </div>
     </div>
   </nav>
@@ -148,151 +113,79 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero-section" id="inicio">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="hero-grid"></div>
-      <div class="hero-glow-1"></div>
-      <div class="hero-glow-2"></div>
-    </div>
+    <div class="hero-bg" aria-hidden="true"></div>
 
     <div class="section-container hero-container">
-      <!-- Text -->
-      <div class="hero-text fade-in">
-        <h1 class="hero-title">
-          Desarrollo de Software<br>
-          a Medida para<br>
-          <span class="text-brand-600">Empresas</span>
-        </h1>
-        <p class="hero-sub">
-          Creamos soluciones tecnológicas escalables que impulsan el crecimiento de tu negocio. Del diseño al despliegue, con foco en resultados.
-        </p>
-        <div class="hero-ctas">
-          <a href="#contacto" class="btn-primary">
-            Solicitar una reunión <i class="bi bi-arrow-right" aria-hidden="true"></i>
-          </a>
-          <a href="#proyectos" class="btn-outline">
-            Ver proyectos <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-          </a>
+      <h1 class="hero-title fade-in">
+        Software a medida.<br>
+        <span class="accent">Hecho para crecer.</span>
+      </h1>
+      <p class="hero-sub fade-in">
+        Desarrollo de software a medida para empresas. Del diseño al despliegue, construimos soluciones escalables que impulsan tu negocio.
+      </p>
+      <div class="hero-ctas fade-in">
+        <a href="#contacto" class="btn-primary">
+          Hablemos de tu proyecto
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#proyectos" class="btn-ghost">Ver proyectos</a>
+      </div>
+
+      <div class="hero-stats fade-in">
+        <div class="hero-stat">
+          <span class="hero-stat-num">+20</span>
+          <span class="hero-stat-label">Proyectos entregados</span>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-num">+20</span>
-            <span class="hero-stat-label">Proyectos entregados</span>
-          </div>
-          <div class="hero-stat-sep" aria-hidden="true"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">100%</span>
-            <span class="hero-stat-label">A medida</span>
-          </div>
-          <div class="hero-stat-sep" aria-hidden="true"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">24/7</span>
-            <span class="hero-stat-label">Soporte continuo</span>
-          </div>
+        <div class="hero-stat-sep" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">100%</span>
+          <span class="hero-stat-label">A medida</span>
+        </div>
+        <div class="hero-stat-sep" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">24/7</span>
+          <span class="hero-stat-label">Soporte continuo</span>
         </div>
       </div>
 
-      <!-- Dashboard illustration -->
-      <div class="hero-visual fade-in fade-delay" aria-hidden="true">
-        <div class="dashboard-card">
-          <div class="dashboard-bar">
-            <div class="dashboard-dots">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-            </div>
-            <div class="dashboard-url">
-              <i class="bi bi-lock-fill"></i> app.funesbyte.com
-            </div>
-          </div>
-
-          <div class="dashboard-metrics">
-            <div class="metric metric-brand">
-              <div class="metric-label">Ventas</div>
-              <div class="metric-value">$48.2K</div>
-              <div class="metric-change positive"><i class="bi bi-arrow-up-right"></i> +12%</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">Usuarios</div>
-              <div class="metric-value">1,842</div>
-              <div class="metric-change positive"><i class="bi bi-arrow-up-right"></i> +8%</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">Estado</div>
-              <div class="metric-value">94%</div>
-              <div class="metric-change ok"><i class="bi bi-check-circle"></i> OK</div>
-            </div>
-          </div>
-
-          <div class="dashboard-chart" role="img" aria-label="Gráfico de actividad">
-            <div class="chart-bars">
-              <div class="chart-bar" style="height:45%"></div>
-              <div class="chart-bar" style="height:62%"></div>
-              <div class="chart-bar" style="height:38%"></div>
-              <div class="chart-bar" style="height:80%"></div>
-              <div class="chart-bar active" style="height:55%"></div>
-              <div class="chart-bar active" style="height:92%"></div>
-              <div class="chart-bar active" style="height:70%"></div>
-            </div>
-          </div>
-
-          <div class="dashboard-activity">
-            <div class="activity-item">
-              <div class="activity-icon activity-success"><i class="bi bi-check-circle-fill"></i></div>
-              <div class="activity-text">Deploy a producción completado</div>
-              <div class="activity-time">ahora</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-icon activity-ok"><i class="bi bi-shield-check-fill"></i></div>
-              <div class="activity-text">Tests de integración: 47/47 pasando</div>
-              <div class="activity-time">1m</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Floating badges -->
-        <div class="float-badge float-badge-top">
-          <div class="float-badge-icon bg-green-500"><i class="bi bi-check text-white"></i></div>
-          <span>Proyecto entregado</span>
-        </div>
-        <div class="float-badge float-badge-bottom float-badge-brand">
-          <i class="bi bi-lightning-charge-fill"></i>
-          <span>Escalable & rápido</span>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- ===== SERVICIOS ===== -->
-  <section class="py-section bg-slate-50" id="servicios">
+  <section class="py-section section-alt" id="servicios">
     <div class="section-container">
-      <div class="section-header fade-in">
+      <div class="section-header-center fade-in">
         <span class="section-tag">Servicios</span>
-        <h2 class="section-title">
-          Soluciones a medida<br>para cada necesidad
-        </h2>
-        <p class="section-sub">
-          Desde sistemas de gestión empresarial hasta APIs de alto rendimiento. Construimos el software que tu negocio realmente necesita.
-        </p>
+        <h2 class="section-title mt-3">Soluciones a medida,<br>para cada necesidad</h2>
+        <p class="section-sub mx-auto mt-4">Construimos el software que tu negocio realmente necesita. Ni más, ni menos.</p>
       </div>
 
       <div class="services-bento">
-        <div class="service-card service-bento-wide fade-in">
-          <div class="service-icon"><i class="bi bi-window-stack" aria-hidden="true"></i></div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+          </div>
           <h3 class="service-title">Desarrollo Web</h3>
           <p class="service-desc">Aplicaciones web a medida, desde un MVP que necesita salir rápido hasta un sistema que tiene que escalar. Trabajamos con PHP, Laravel y frameworks modernos.</p>
         </div>
-        <div class="service-card service-bento-narrow fade-in">
-          <div class="service-icon"><i class="bi bi-file-earmark-richtext" aria-hidden="true"></i></div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </div>
           <h3 class="service-title">Blogs</h3>
           <p class="service-desc">Blogs funcionales, rápidos y fáciles de administrar. Con panel propio o integrado a tu sitio existente.</p>
         </div>
-        <div class="service-card service-bento-narrow fade-in">
-          <div class="service-icon"><i class="bi bi-layout-text-window" aria-hidden="true"></i></div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          </div>
           <h3 class="service-title">Landing Pages</h3>
           <p class="service-desc">Páginas de conversión bien diseñadas, rápidas y optimizadas para captar clientes.</p>
         </div>
-        <div class="service-card service-bento-wide fade-in">
-          <div class="service-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v7M14 17.5h7"/></svg>
+          </div>
           <h3 class="service-title">Sistemas a Medida</h3>
           <p class="service-desc">Software específico para tu negocio. El tipo de herramienta que no encontrás lista en el mercado. Desde gestión interna hasta ERPs livianos.</p>
         </div>
@@ -300,64 +193,175 @@
     </div>
   </section>
 
-  <!-- ===== POR QUÉ FUNESBYTE ===== -->
-  <section class="py-section bg-white" id="por-que">
+  <!-- ===== BENEFICIOS ===== -->
+  <section class="py-section" id="beneficios">
     <div class="section-container">
-      <div class="why-grid">
-        <div class="fade-in">
-          <span class="section-tag">¿Por qué nosotros?</span>
-          <h2 class="section-title mt-3">
-            Software que resuelve<br>
-            <span class="text-brand-600">problemas reales</span>
-          </h2>
-          <p class="section-sub mt-4 mb-8">
-            No somos una fábrica de código. Somos un equipo que entiende tu negocio antes de escribir una línea.
+      <div class="section-header fade-in">
+        <span class="section-tag">¿Por qué FunesByte?</span>
+        <h2 class="section-title mt-3">Software que resuelve<br>problemas reales</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit fade-in">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.44 12.99a7.8 7.8 0 0 0 0-1.98l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.5 7.5 0 0 0-1.71-.99l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54c-.61.25-1.19.59-1.71.99l-2.39-.96a.5.5 0 0 0-.61.22L2.77 8.79a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0 0 1.98l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.13.22.39.31.61.22l2.39-.96c.52.4 1.1.74 1.71.99l.36 2.54c.04.25.25.43.5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54a7.5 7.5 0 0 0 1.71-.99l2.39.96c.22.09.48 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
+          <h3 class="benefit-title">Desarrollo a medida</h3>
+          <p class="benefit-desc">Cada solución construida específicamente para tu negocio, no adaptada de una plantilla.</p>
+        </div>
+        <div class="benefit fade-in">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m23 6-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+          <h3 class="benefit-title">Pensado para escalar</h3>
+          <p class="benefit-desc">Arquitectura preparada para crecer. Tu software escala cuando tu negocio escala.</p>
+        </div>
+        <div class="benefit fade-in">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          <h3 class="benefit-title">Soporte continuo</h3>
+          <p class="benefit-desc">No desaparecemos tras la entrega. Acompañamos el crecimiento de tu solución.</p>
+        </div>
+        <div class="benefit fade-in">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+          <h3 class="benefit-title">Comunicación directa</h3>
+          <p class="benefit-desc">Trato cercano y transparente en cada etapa, sin intermediarios ni sorpresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTO ===== -->
+  <section class="py-section" id="producto">
+    <div class="section-container">
+      <div class="section-header-center fade-in">
+        <span class="section-tag">Producto destacado</span>
+        <h2 class="section-title mt-3">El punto de venta que<br>tu negocio necesita.</h2>
+        <p class="section-sub mx-auto mt-4">FunesPOS ayuda a kioscos, almacenes y comercios a vender más rápido, controlar el stock y administrar el negocio desde cualquier lugar.</p>
+      </div>
+
+      <div class="product-panel fade-in">
+        <div class="product-content">
+          <h3 class="product-title">FunesPOS</h3>
+          <p class="product-desc">
+            Rápido para cobrar, simple para tu equipo. Lo instalás en cualquier PC o celular y lo usás desde el primer día.
           </p>
-          <a href="#contacto" class="btn-primary">
-            Hablemos de tu proyecto <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          <ul class="product-features" role="list">
+            <li>Modo offline</li>
+            <li>PWA</li>
+            <li>Inventario</li>
+            <li>Reportes en tiempo real</li>
+          </ul>
+          <a href="funespos.html" class="btn-primary">
+            Conocer FunesPOS
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
+        <div class="product-visual">
+          <img src="img/POS.png" alt="Interfaz del sistema FunesPOS — punto de venta para retail" loading="lazy" width="600" height="338">
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="why-cards fade-in fade-delay">
-          <div class="why-card">
-            <div class="why-icon"><i class="bi bi-puzzle-fill" aria-hidden="true"></i></div>
-            <h4 class="why-title">Desarrollo a medida</h4>
-            <p class="why-desc">Cada solución construida específicamente para tu negocio, no adaptada de una plantilla.</p>
+  <!-- ===== PROYECTOS ===== -->
+  <section class="py-section section-alt" id="proyectos">
+    <div class="section-container">
+      <div class="section-header-row fade-in">
+        <div>
+          <span class="section-tag">Proyectos</span>
+          <h2 class="section-title mt-3">Casos de éxito</h2>
+        </div>
+        <a href="#contacto" class="text-link">
+          Contanos el tuyo
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card fade-in">
+          <div class="project-img">
+            <img src="img/POS.png" alt="Sistema FunesPOS — Punto de venta para retail" loading="lazy" width="600" height="338">
           </div>
-          <div class="why-card">
-            <div class="why-icon"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></div>
-            <h4 class="why-title">Soluciones escalables</h4>
-            <p class="why-desc">Arquitectura pensada para crecer. Tu software escala cuando tu negocio escala.</p>
+          <div class="project-body">
+            <h3 class="project-title">FunesPOS</h3>
+            <p class="project-desc">Sistema de punto de venta para retail. Modo offline, PWA, gestión de inventario y reportes en tiempo real.</p>
+            <div class="project-footer">
+              <span class="status-badge">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+                En producción
+              </span>
+              <a href="funespos.html" class="text-link">Ver producto</a>
+            </div>
           </div>
-          <div class="why-card">
-            <div class="why-icon"><i class="bi bi-headset" aria-hidden="true"></i></div>
-            <h4 class="why-title">Soporte continuo</h4>
-            <p class="why-desc">No desaparecemos tras la entrega. Acompañamos el crecimiento de tu solución.</p>
+        </article>
+
+        <article class="project-card fade-in">
+          <div class="project-img">
+            <img src="https://s0.wp.com/mshots/v1/https://www.funesya.com.ar/?w=600&h=338" alt="FunesYa — Agregador de noticias locales" loading="lazy" width="600" height="338">
           </div>
-          <div class="why-card">
-            <div class="why-icon"><i class="bi bi-cpu-fill" aria-hidden="true"></i></div>
-            <h4 class="why-title">Tecnología moderna</h4>
-            <p class="why-desc">Usamos el stack más adecuado para cada proyecto, siempre con tecnología de vanguardia.</p>
+          <div class="project-body">
+            <h3 class="project-title">FunesYa</h3>
+            <p class="project-desc">Agregador de noticias locales de Funes, Santa Fe. Múltiples fuentes unificadas en una sola plataforma.</p>
+            <div class="project-footer">
+              <span class="status-badge">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+                En producción
+              </span>
+              <a href="https://www.funesya.com.ar/" target="_blank" rel="noopener noreferrer" class="text-link">Ver proyecto</a>
+            </div>
           </div>
-          <div class="why-card">
-            <div class="why-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div>
-            <h4 class="why-title">Orientado al negocio</h4>
-            <p class="why-desc">El software es un medio, no un fin. Siempre pensamos en el impacto en tu negocio.</p>
+        </article>
+
+        <article class="project-card fade-in">
+          <div class="project-img">
+            <img src="https://s0.wp.com/mshots/v1/https://www.observatoriocomex.org/?w=600&h=338" alt="Observatorio de Comercio Exterior PyME" loading="lazy" width="600" height="338">
           </div>
-          <div class="why-card">
-            <div class="why-icon"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i></div>
-            <h4 class="why-title">Comunicación cercana</h4>
-            <p class="why-desc">Comunicación directa y transparente en cada etapa, sin intermediarios.</p>
+          <div class="project-body">
+            <h3 class="project-title">Observatorio ComEx PyME</h3>
+            <p class="project-desc">Plataforma de análisis de comercio exterior para CAECS-UAI Rosario. Datos, visualizaciones y reportes.</p>
+            <div class="project-footer">
+              <span class="status-badge">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+                En producción
+              </span>
+              <a href="https://www.observatoriocomex.org/" target="_blank" rel="noopener noreferrer" class="text-link">Ver proyecto</a>
+            </div>
           </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO ===== -->
+  <section class="py-section" id="proceso">
+    <div class="section-container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Proceso</span>
+        <h2 class="section-title mt-3">Cómo trabajamos</h2>
+      </div>
+
+      <div class="process-grid fade-in">
+        <div class="process-step">
+          <h3 class="process-title">Descubrimiento</h3>
+          <p class="process-desc">Entendemos tu negocio, tus objetivos y el alcance del proyecto antes de escribir una línea.</p>
+        </div>
+        <div class="process-step">
+          <h3 class="process-title">Diseño</h3>
+          <p class="process-desc">Definimos la experiencia de usuario y la arquitectura técnica de la solución.</p>
+        </div>
+        <div class="process-step">
+          <h3 class="process-title">Desarrollo</h3>
+          <p class="process-desc">Construcción iterativa con entregas frecuentes y pruebas en cada etapa.</p>
+        </div>
+        <div class="process-step">
+          <h3 class="process-title">Lanzamiento y soporte</h3>
+          <p class="process-desc">Deploy a producción, mantenimiento y mejora continua. No desaparecemos.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== TECNOLOGÍAS ===== -->
-  <section class="py-section bg-slate-50" id="tecnologias">
+  <section class="py-section section-alt tech-section" id="tecnologias">
+    <div class="tech-bg" aria-hidden="true"></div>
     <div class="section-container">
-      <div class="text-center section-header-center fade-in">
+      <div class="section-header-center fade-in">
         <span class="section-tag">Tecnologías</span>
         <h2 class="section-title mt-3">Stack tecnológico de primer nivel</h2>
         <p class="section-sub mx-auto mt-4">Trabajamos con las tecnologías más demandadas y confiables del mercado.</p>
@@ -416,201 +420,88 @@
     </div>
   </section>
 
-  <!-- ===== PROCESO ===== -->
-  <section class="py-section bg-white" id="proceso">
-    <div class="section-container">
-      <div class="text-center section-header-center fade-in">
-        <span class="section-tag">Proceso</span>
-        <h2 class="section-title mt-3">Cómo trabajamos</h2>
-        <p class="section-sub mx-auto mt-4">Un proceso claro y transparente, de principio a fin.</p>
-      </div>
-
-      <div class="process-timeline fade-in">
-        <div class="process-line" aria-hidden="true"></div>
-
-        <div class="process-step">
-          <div class="process-dot">
-            <i class="bi bi-search" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">01</span>
-          <h4 class="process-title">Descubrimiento</h4>
-          <p class="process-desc">Entendemos tu negocio y objetivos</p>
-        </div>
-        <div class="process-step">
-          <div class="process-dot">
-            <i class="bi bi-clipboard-data" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">02</span>
-          <h4 class="process-title">Análisis</h4>
-          <p class="process-desc">Definimos requerimientos y alcance</p>
-        </div>
-        <div class="process-step">
-          <div class="process-dot">
-            <i class="bi bi-palette" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">03</span>
-          <h4 class="process-title">Diseño</h4>
-          <p class="process-desc">UX/UI y arquitectura técnica</p>
-        </div>
-        <div class="process-step">
-          <div class="process-dot process-dot-active">
-            <i class="bi bi-code-slash" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">04</span>
-          <h4 class="process-title">Desarrollo</h4>
-          <p class="process-desc">Construcción iterativa con entregas semanales</p>
-        </div>
-        <div class="process-step">
-          <div class="process-dot">
-            <i class="bi bi-bug" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">05</span>
-          <h4 class="process-title">Pruebas</h4>
-          <p class="process-desc">QA y testing exhaustivo</p>
-        </div>
-        <div class="process-step">
-          <div class="process-dot">
-            <i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">06</span>
-          <h4 class="process-title">Implementación</h4>
-          <p class="process-desc">Deploy y puesta en producción</p>
-        </div>
-        <div class="process-step">
-          <div class="process-dot">
-            <i class="bi bi-shield-check" aria-hidden="true"></i>
-          </div>
-          <span class="process-num">07</span>
-          <h4 class="process-title">Soporte</h4>
-          <p class="process-desc">Mantenimiento y mejora continua</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROYECTOS ===== -->
-  <section class="py-section bg-slate-50" id="proyectos">
-    <div class="section-container">
-      <div class="section-header-row fade-in">
-        <div>
-          <span class="section-tag">Proyectos</span>
-          <h2 class="section-title mt-3">Casos de éxito</h2>
-        </div>
-        <a href="#contacto" class="text-link">Ver todos <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-      </div>
-
-      <div class="projects-grid">
-        <div class="project-card fade-in">
-          <div class="project-img">
-            <img src="img/POS.png" alt="Sistema FunesPOS — Punto de venta para retail" loading="lazy" width="600" height="338">
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">FunesPOS</h3>
-            <p class="project-desc">Sistema de punto de venta para retail. Modo offline, PWA, gestión de inventario y reportes en tiempo real.</p>
-            <div class="project-footer">
-              <span class="status-badge"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> En producción</span>
-              <a href="funespos.html" class="text-link">Ver producto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card fade-in">
-          <div class="project-img">
-            <img src="https://s0.wp.com/mshots/v1/https://www.funesya.com.ar/?w=600&h=338" alt="FunesYa — Agregador de noticias locales" loading="lazy" width="600" height="338">
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">FunesYa</h3>
-            <p class="project-desc">Agregador de noticias locales de Funes, Santa Fe. Múltiples fuentes unificadas en una sola plataforma.</p>
-            <div class="project-footer">
-              <span class="status-badge"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> En producción</span>
-              <a href="https://www.funesya.com.ar/" target="_blank" rel="noopener noreferrer" class="text-link">Ver proyecto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card fade-in">
-          <div class="project-img">
-            <img src="https://s0.wp.com/mshots/v1/https://www.observatoriocomex.org/?w=600&h=338" alt="Observatorio de Comercio Exterior PyME" loading="lazy" width="600" height="338">
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Observatorio ComEx PyME</h3>
-            <p class="project-desc">Plataforma de análisis de comercio exterior para CAECS-UAI Rosario. Datos, visualizaciones y reportes.</p>
-            <div class="project-footer">
-              <span class="status-badge"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> En producción</span>
-              <a href="https://www.observatoriocomex.org/" target="_blank" rel="noopener noreferrer" class="text-link">Ver proyecto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== CTA BANNER ===== -->
-  <section class="cta-section" id="cta">
-    <div class="cta-bg" aria-hidden="true">
-      <div class="cta-glow-1"></div>
-      <div class="cta-glow-2"></div>
-    </div>
-    <div class="section-container text-center cta-container fade-in">
-      <h2 class="cta-title">¿Tenés un proyecto en mente?</h2>
-      <p class="cta-sub">Escribinos por WhatsApp y te responderemos a la brevedad.</p>
-      <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer" class="btn-white">
-        Escribinos por WhatsApp <i class="bi bi-whatsapp" aria-hidden="true"></i>
-      </a>
-    </div>
-  </section>
-
   <!-- ===== NOSOTROS ===== -->
-  <section class="py-section bg-white" id="nosotros">
+  <section class="py-section" id="nosotros">
     <div class="section-container">
       <div class="about-grid">
         <div class="fade-in">
           <span class="section-tag">Nosotros</span>
-          <h2 class="section-title mt-3">
-            Software que resuelve<br>problemas reales
-          </h2>
+          <h2 class="section-title mt-3">Primero el problema.<br>Después el código.</h2>
           <p class="section-sub mt-4">
-            En FunesByte nos enfocamos en entender el problema antes de proponer una solución. No vendemos tecnología, vendemos resultados.
-          </p>
-          <p class="section-sub mt-3 mb-8">
-            Trabajamos con empresas y emprendedores que necesitan software que funcione, que escale y que sea fácil de mantener. Sin promesas que no se cumplen.
+            En FunesByte nos enfocamos en entender el problema antes de proponer una solución. Trabajamos con empresas y emprendedores que necesitan software que funcione, que escale y que sea fácil de mantener.
           </p>
           <div class="about-tags">
-            <span class="about-tag"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Funes, Santa Fe</span>
-            <span class="about-tag"><i class="bi bi-translate" aria-hidden="true"></i> Español / Inglés</span>
-            <span class="about-tag"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Lic. Tecnologías de la Información</span>
+            <span class="about-tag">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Funes, Santa Fe
+            </span>
+            <span class="about-tag">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Español / Inglés
+            </span>
           </div>
         </div>
 
         <div class="team-card fade-in fade-delay">
-          <div class="team-header">
-            <h4 class="team-name">Ignacio D. López</h4>
-          </div>
+          <h3 class="team-name">Ignacio D. López</h3>
+          <p class="team-role">Fundador &amp; Lead Developer</p>
           <p class="team-bio">
-            Desarrollador de software especializado en PHP con Laravel y Symfony, C# con .NET y arquitecturas cloud. Técnico en Desarrollo de Software y Licenciado en Tecnologías de la Información. Apasionado por construir soluciones reales que funcionen.
+            Desarrollador especializado en PHP con Laravel y Symfony, C# con .NET y arquitecturas cloud. Técnico en Desarrollo de Software y Licenciado en Tecnología Informática. Apasionado por construir soluciones reales que funcionen.
           </p>
           <div class="team-links">
             <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer" class="team-link" aria-label="LinkedIn de Ignacio López">
-              <i class="bi bi-linkedin" aria-hidden="true"></i>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
             </a>
             <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer" class="team-link" aria-label="GitHub de Ignacio López">
-              <i class="bi bi-github" aria-hidden="true"></i>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3z"/></svg>
             </a>
             <a href="https://www.ignaciodlopez.com" target="_blank" rel="noopener noreferrer" class="team-link" aria-label="Sitio personal de Ignacio López">
-              <i class="bi bi-globe2" aria-hidden="true"></i>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </a>
             <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer" class="team-link" aria-label="WhatsApp de Ignacio López">
-              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07a8.1 8.1 0 0 1-2.39-1.47 8.96 8.96 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.89 9.89c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41"/></svg>
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="py-section section-alt" id="faq">
+    <div class="section-container">
+      <div class="section-header-center fade-in">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title mt-3">Preguntas frecuentes</h2>
+      </div>
+
+      <div class="faq-list fade-in">
+        <details class="faq-item">
+          <summary>¿Cuánto tarda un proyecto típico?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-answer">Depende del alcance. Una landing page puede estar lista en una o dos semanas; un sistema de gestión completo, entre uno y tres meses. Antes de empezar te damos una estimación clara y trabajamos con entregas frecuentes para que veas avances desde el principio.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo se calcula el costo?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-answer">Presupuestamos por proyecto, según el alcance definido en la etapa de descubrimiento. Sin costos ocultos: sabés cuánto vas a invertir antes de empezar. Si el alcance cambia en el camino, lo conversamos y ajustamos juntos.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué pasa después de la entrega?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-answer">No desaparecemos. Ofrecemos soporte y mantenimiento continuo: corrección de errores, mejoras y acompañamiento a medida que tu negocio crece. Vos decidís el nivel de soporte que necesitás.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿El software queda a mi nombre?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-answer">Sí. El código y la solución desarrollada son tuyos. Te entregamos todo documentado para que nunca quedes atado a nosotros, aunque esperamos que quieras quedarte.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo empezamos?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-answer">Escribinos por el formulario o por WhatsApp contándonos qué necesitás. Coordinamos una reunión sin cargo para entender tu proyecto y te decimos con honestidad si podemos ayudarte. Si no, también.</p>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- ===== CONTACTO ===== -->
-  <section class="py-section bg-slate-50" id="contacto">
+  <section class="py-section contact-section" id="contacto">
     <div class="section-container">
       <div class="contact-wrapper">
         <div class="text-center fade-in">
@@ -640,22 +531,19 @@
               <textarea id="contact-details" name="details" rows="4" placeholder="Presupuesto aproximado, urgencia, referencias..."></textarea>
             </div>
             <button type="submit" id="submit-btn" class="submit-btn">
-              Enviar mensaje <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              Enviar mensaje
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
           </form>
 
           <div class="contact-links">
             <a href="mailto:funesbyte@gmail.com" class="contact-link">
-              <i class="bi bi-envelope-fill" aria-hidden="true"></i> funesbyte@gmail.com
-            </a>
-            <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
-            </a>
-            <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <i class="bi bi-github" aria-hidden="true"></i> GitHub
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              funesbyte@gmail.com
             </a>
             <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07a8.1 8.1 0 0 1-2.39-1.47 8.96 8.96 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.89 9.89c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41"/></svg>
+              WhatsApp
             </a>
           </div>
         </div>
@@ -670,22 +558,30 @@
     <div class="section-container footer-grid">
       <div class="footer-brand">
         <a href="#inicio" class="footer-logo" aria-label="FunesByte — Inicio">
-          <div class="nav-logo-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="nav-logo-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
           <span class="footer-logo-text">FunesByte</span>
         </a>
-        <p class="footer-desc">Empresa de desarrollo de software a medida. Creamos soluciones tecnológicas escalables que impulsan el crecimiento de tu negocio.</p>
+        <p class="footer-desc">Desarrollo de software a medida. Soluciones tecnológicas escalables que impulsan el crecimiento de tu negocio.</p>
         <div class="footer-socials">
-          <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-          <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-          <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/ignaciolopez" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://github.com/ignaciodlopez" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3z"/></svg>
+          </a>
+          <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="WhatsApp">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07a8.1 8.1 0 0 1-2.39-1.47 8.96 8.96 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.89 9.89c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41"/></svg>
+          </a>
         </div>
       </div>
 
       <nav class="footer-nav" aria-label="Navegación del footer">
-        <h5 class="footer-nav-title">Navegación</h5>
+        <h2 class="footer-nav-title">Navegación</h2>
         <ul>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#producto">Producto</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -693,11 +589,20 @@
       </nav>
 
       <div class="footer-contact">
-        <h5 class="footer-nav-title">Contacto</h5>
+        <h2 class="footer-nav-title">Contacto</h2>
         <ul>
-          <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:funesbyte@gmail.com">funesbyte@gmail.com</a></li>
-          <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Funes, Santa Fe, Argentina</span></li>
-          <li><i class="bi bi-whatsapp" aria-hidden="true"></i><a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <a href="mailto:funesbyte@gmail.com">funesbyte@gmail.com</a>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Funes, Santa Fe, Argentina</span>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07a8.1 8.1 0 0 1-2.39-1.47 8.96 8.96 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.89 9.89c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41"/></svg>
+            <a href="https://wa.me/message/LMYMGHM7BRU4E1" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </li>
         </ul>
       </div>
     </div>

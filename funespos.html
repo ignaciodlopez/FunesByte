@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,37 +25,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            brand: {
-              50:  '#f5f3ff',
-              100: '#ede9fe',
-              200: '#ddd6fe',
-              300: '#c4b5fd',
-              400: '#a78bfa',
-              500: '#8B5CF6',
-              600: '#7C3AED',
-              700: '#6D28D9',
-              800: '#5b21b6',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="funespos.css">
 
   <!-- Schema.org -->
@@ -81,51 +53,49 @@
   }
   </script>
 </head>
-<body class="font-sans bg-white text-slate-900 antialiased overflow-x-hidden">
+<body>
+
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
 
   <!-- ===== NAVBAR ===== -->
-  <nav id="pos-navbar" aria-label="Navegación FunesPOS">
-    <div class="pos-nav-container">
-      <div class="pos-nav-inner">
+  <nav id="navbar" aria-label="Navegación FunesPOS">
+    <div class="nav-container">
+      <div class="nav-inner">
 
-        <!-- Logo + breadcrumb -->
-        <div class="pos-nav-brand">
-          <a href="index.html" class="pos-nav-back" aria-label="Volver a FunesByte">
-            <div class="pos-logo-icon">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <div class="pos-crumb">
+          <a href="index.html" class="nav-logo" aria-label="Volver a FunesByte">
+            <span class="nav-logo-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </div>
-            <span class="pos-nav-funesbyte">FunesByte</span>
+            </span>
+            <span class="nav-logo-text pos-crumb-parent">FunesByte</span>
           </a>
-          <span class="pos-nav-sep" aria-hidden="true">/</span>
-          <span class="pos-nav-product">FunesPOS</span>
+          <span class="pos-crumb-sep" aria-hidden="true">/</span>
+          <span class="nav-logo-text">FunesPOS</span>
         </div>
 
-        <!-- Links -->
-        <ul class="pos-nav-links" role="list">
-          <li><a href="#features" class="pos-nav-link">Funcionalidades</a></li>
-          <li><a href="#roles" class="pos-nav-link">Roles</a></li>
-          <li><a href="#contacto" class="pos-nav-link">Demo</a></li>
+        <ul class="nav-links" role="list">
+          <li><a href="#features"  class="nav-link">Funcionalidades</a></li>
+          <li><a href="#roles"     class="nav-link">Roles</a></li>
+          <li><a href="#contacto"  class="nav-link">Demo</a></li>
         </ul>
 
-        <div class="pos-nav-actions">
-          <a href="#contacto" class="pos-cta-btn">Pedir demo gratuita</a>
-          <button id="pos-mobile-btn" class="pos-mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
-            <i class="bi bi-list" aria-hidden="true"></i>
+        <div class="nav-actions">
+          <a href="#contacto" class="btn-primary-sm">Pedir demo</a>
+          <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            <svg class="icon icon-close hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile menu -->
-      <div id="pos-mobile-menu" class="pos-mobile-menu hidden">
-        <a href="#features" class="pos-mobile-link">Funcionalidades</a>
-        <a href="#roles" class="pos-mobile-link">Roles</a>
-        <a href="#contacto" class="pos-mobile-link">Demo</a>
-        <a href="index.html" class="pos-mobile-link pos-mobile-back">
-          <i class="bi bi-arrow-left" aria-hidden="true"></i> Volver a FunesByte
-        </a>
-        <a href="#contacto" class="pos-mobile-cta">Pedir demo gratuita</a>
+      <div id="mobile-menu" class="mobile-menu hidden" role="dialog" aria-label="Menú de navegación">
+        <a href="#features" class="mobile-link">Funcionalidades</a>
+        <a href="#roles"    class="mobile-link">Roles</a>
+        <a href="#contacto" class="mobile-link">Demo</a>
+        <a href="index.html" class="mobile-link">← Volver a FunesByte</a>
+        <a href="#contacto" class="mobile-cta">Pedir demo gratuita</a>
       </div>
     </div>
   </nav>
@@ -133,231 +103,216 @@
   <main id="contenido-principal">
 
   <!-- ===== HERO ===== -->
-  <section class="pos-hero" id="inicio">
-    <div class="pos-hero-bg" aria-hidden="true">
-      <div class="pos-hero-grid"></div>
-      <div class="pos-hero-glow"></div>
-    </div>
+  <section class="hero-section" id="inicio">
+    <div class="hero-bg" aria-hidden="true"></div>
 
-    <div class="pos-hero-inner">
-      <div class="pos-hero-text fade-in">
-        <span class="pos-kicker">Sistema de Punto de Venta · POS</span>
-        <h1 class="pos-hero-title">
-          Vendé más.<br>
-          Controlá todo.<br>
-          <span class="pos-title-accent">Preocupate menos.</span>
-        </h1>
-        <p class="pos-hero-lead">
-          FunesPOS es el sistema que necesita tu negocio para gestionar ventas,
-          stock, caja y sucursales — desde el mostrador o desde el celular.
-        </p>
-        <div class="pos-hero-ctas">
-          <a href="#contacto" class="pos-cta-btn pos-cta-btn-lg">
-            Pedir demo gratuita
-          </a>
-          <a href="#features" class="pos-ghost-btn">
-            Ver funcionalidades <i class="bi bi-arrow-down" aria-hidden="true"></i>
-          </a>
-        </div>
+    <div class="section-container hero-container">
+      <span class="section-tag fade-in">Sistema de Punto de Venta · POS</span>
+      <h1 class="hero-title mt-4 fade-in">
+        Vendé más.<br>
+        Controlá todo.<br>
+        <span class="accent">Preocupate menos.</span>
+      </h1>
+      <p class="hero-sub fade-in">
+        FunesPOS es el sistema que necesita tu negocio para gestionar ventas, stock, caja y sucursales — desde el mostrador o desde el celular.
+      </p>
+      <div class="hero-ctas fade-in">
+        <a href="#contacto" class="btn-primary">
+          Pedir demo gratuita
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#features" class="btn-ghost">Ver funcionalidades</a>
       </div>
 
       <!-- Screenshot -->
-      <div class="pos-hero-screen fade-in fade-delay">
-        <div class="pos-screen-frame">
-          <div class="pos-screen-bar" aria-hidden="true">
-            <div class="pos-screen-dots">
-              <span class="pos-dot pos-dot-red"></span>
-              <span class="pos-dot pos-dot-yellow"></span>
-              <span class="pos-dot pos-dot-green"></span>
+      <div class="hero-visual fade-in fade-delay">
+        <div class="dashboard-card">
+          <div class="dashboard-bar" aria-hidden="true">
+            <div class="dashboard-dots">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
-            <div class="pos-screen-url">
-              <i class="bi bi-lock-fill"></i> app.funespos.com
+            <div class="dashboard-url">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              app.funespos.com
             </div>
           </div>
           <img src="img/POS.png" alt="Interfaz de FunesPOS — Terminal de ventas con grilla de productos y panel de cobro" width="900" height="600" loading="eager">
         </div>
       </div>
+
+      <!-- Usado en -->
+      <div class="pos-forwhom fade-in" aria-label="Sectores donde se usa FunesPOS">
+        <p class="pos-forwhom-label">Usado en</p>
+        <div class="pos-forwhom-tags">
+          <span>Kioscos</span>
+          <span>Ferreterías</span>
+          <span>Almacenes</span>
+          <span>Carnicerías</span>
+          <span>Indumentaria</span>
+          <span>Panaderías</span>
+          <span>Farmacias</span>
+          <span>Librerías</span>
+          <span>Minimercados</span>
+          <span>Retail</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== PARA QUIÉN ===== -->
-  <div class="pos-forwhom" aria-label="Sectores donde se usa FunesPOS">
-    <div class="pos-container">
-      <p class="pos-forwhom-label">Usado en</p>
-      <div class="pos-forwhom-tags">
-        <span><i class="bi bi-shop" aria-hidden="true"></i> Kioscos</span>
-        <span><i class="bi bi-tools" aria-hidden="true"></i> Ferreterías</span>
-        <span><i class="bi bi-basket2" aria-hidden="true"></i> Almacenes</span>
-        <span><i class="bi bi-scissors" aria-hidden="true"></i> Carnicerías</span>
-        <span><i class="bi bi-bag" aria-hidden="true"></i> Indumentaria</span>
-        <span><i class="bi bi-cup-hot" aria-hidden="true"></i> Panaderías</span>
-        <span><i class="bi bi-capsule" aria-hidden="true"></i> Farmacias</span>
-        <span><i class="bi bi-book" aria-hidden="true"></i> Librerías</span>
-        <span><i class="bi bi-cart3" aria-hidden="true"></i> Minimercados</span>
-        <span><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> Retail</span>
-      </div>
-    </div>
-  </div>
-
   <!-- ===== FEATURES ===== -->
-  <section class="pos-section" id="features">
-    <div class="pos-container">
-      <div class="pos-section-header fade-in">
-        <span class="pos-tag">Funcionalidades</span>
-        <h2 class="pos-section-title">Todo lo que necesitás<br>para operar</h2>
+  <section class="py-section section-alt" id="features">
+    <div class="section-container">
+      <div class="section-header-center fade-in">
+        <span class="section-tag">Funcionalidades</span>
+        <h2 class="section-title mt-3">Todo lo que necesitás<br>para operar</h2>
       </div>
 
       <div class="pos-features-grid">
-
-        <div class="pos-feature-card pos-feature-wide fade-in">
-          <div class="pos-feature-icon"><i class="bi bi-receipt-cutoff" aria-hidden="true"></i></div>
-          <h3 class="pos-feature-title">Terminal de ventas</h3>
-          <p class="pos-feature-desc">Buscá por nombre, código de barras o categoría. Cobrá en efectivo, tarjeta o transferencia. Ticket en PDF automático.</p>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+          </div>
+          <h3 class="service-title">Terminal de ventas</h3>
+          <p class="service-desc">Buscá por nombre, código de barras o categoría. Cobrá en efectivo, tarjeta o transferencia. Ticket en PDF automático.</p>
         </div>
 
-        <div class="pos-feature-card fade-in">
-          <div class="pos-feature-icon"><i class="bi bi-wifi-off" aria-hidden="true"></i></div>
-          <h3 class="pos-feature-title">Funciona sin internet</h3>
-          <p class="pos-feature-desc">Las ventas se guardan localmente si se corta la conexión y se sincronizan solas cuando vuelve.</p>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m1 1 22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.58 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+          </div>
+          <h3 class="service-title">Funciona sin internet</h3>
+          <p class="service-desc">Las ventas se guardan localmente si se corta la conexión y se sincronizan solas cuando vuelve.</p>
         </div>
 
-        <div class="pos-feature-card fade-in">
-          <div class="pos-feature-icon"><i class="bi bi-phone" aria-hidden="true"></i></div>
-          <h3 class="pos-feature-title">App en el celular</h3>
-          <p class="pos-feature-desc">Instalable en Android e iOS. Escáner de códigos de barras por cámara incluido.</p>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3 class="service-title">App en el celular</h3>
+          <p class="service-desc">Instalable en Android e iOS. Escáner de códigos de barras por cámara incluido.</p>
         </div>
 
-        <div class="pos-feature-card fade-in">
-          <div class="pos-feature-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
-          <h3 class="pos-feature-title">Multi-sucursal</h3>
-          <p class="pos-feature-desc">Stock independiente por sucursal. Transferencias entre locales con trazabilidad completa.</p>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          </div>
+          <h3 class="service-title">Multi-sucursal</h3>
+          <p class="service-desc">Stock independiente por sucursal. Transferencias entre locales con trazabilidad completa.</p>
         </div>
 
-        <div class="pos-feature-card fade-in">
-          <div class="pos-feature-icon"><i class="bi bi-cash-coin" aria-hidden="true"></i></div>
-          <h3 class="pos-feature-title">Control de caja</h3>
-          <p class="pos-feature-desc">Apertura y cierre de turno. Seguimiento de diferencias y historial por cajero y terminal.</p>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="service-title">Control de caja</h3>
+          <p class="service-desc">Apertura y cierre de turno. Seguimiento de diferencias y historial por cajero y terminal.</p>
         </div>
 
-        <div class="pos-feature-card pos-feature-wide fade-in">
-          <div class="pos-feature-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></div>
-          <h3 class="pos-feature-title">Reportes exportables</h3>
-          <p class="pos-feature-desc">Ventas por período, productos más vendidos, rentabilidad y heatmap de tendencias. En PDF y Excel.</p>
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3 class="service-title">Reportes exportables</h3>
+          <p class="service-desc">Ventas por período, productos más vendidos, rentabilidad y heatmap de tendencias. En PDF y Excel.</p>
         </div>
+      </div>
 
+      <!-- Datos rápidos -->
+      <div class="pos-stats fade-in">
+        <div class="pos-stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 5v14M7 5v14M11 5v14M15 5v14M18 5v14M21 5v14"/></svg>
+          <h3 class="pos-stat-label">Compatible con lectores</h3>
+          <p class="pos-stat-sub">USB en PC · cámara del celular</p>
+        </div>
+        <div class="pos-stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          <h3 class="pos-stat-label">Reportes y análisis</h3>
+          <p class="pos-stat-sub">Rentabilidad, más vendidos, heatmap — PDF y Excel</p>
+        </div>
+        <div class="pos-stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          <h3 class="pos-stat-label">Multi-sucursal</h3>
+          <p class="pos-stat-sub">Stock por local, transferencias con trazabilidad</p>
+        </div>
+        <div class="pos-stat">
+          <span class="pos-stat-badge">PWA</span>
+          <h3 class="pos-stat-label">App instalable</h3>
+          <p class="pos-stat-sub">Android · iOS · sin app store</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATS ===== -->
-  <div class="pos-stats-bar">
-    <div class="pos-container">
-      <div class="pos-stats-grid">
-        <div class="pos-stat">
-          <div class="pos-stat-icon"><i class="bi bi-upc-scan" aria-hidden="true"></i></div>
-          <div class="pos-stat-label">Compatible con lectores</div>
-          <div class="pos-stat-sub">USB en PC · cámara del celular</div>
-        </div>
-        <div class="pos-stat">
-          <div class="pos-stat-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></div>
-          <div class="pos-stat-label">Reportes y análisis</div>
-          <div class="pos-stat-sub">Rentabilidad, productos más vendidos, heatmap — PDF y Excel</div>
-        </div>
-        <div class="pos-stat">
-          <div class="pos-stat-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
-          <div class="pos-stat-label">Multi-sucursal</div>
-          <div class="pos-stat-sub">Stock por local, transferencias con trazabilidad completa</div>
-        </div>
-        <div class="pos-stat">
-          <div class="pos-stat-badge">PWA</div>
-          <div class="pos-stat-label">App instalable</div>
-          <div class="pos-stat-sub">Android · iOS · sin app store</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ===== ROLES ===== -->
-  <section class="pos-section pos-section-light" id="roles">
-    <div class="pos-container">
-      <div class="pos-section-header pos-section-header-center fade-in">
-        <span class="pos-tag">Usuarios & Permisos</span>
-        <h2 class="pos-section-title">Cada empleado ve lo que<br><span class="text-brand-600">necesita</span> ver</h2>
-        <p class="pos-section-sub">Roles predefinidos con permisos editables. Sin accesos de más, sin configuración compleja.</p>
+  <section class="py-section" id="roles">
+    <div class="section-container">
+      <div class="section-header-center fade-in">
+        <span class="section-tag">Usuarios &amp; Permisos</span>
+        <h2 class="section-title mt-3">Cada empleado ve<br>lo que necesita ver</h2>
+        <p class="section-sub mx-auto mt-4">Roles predefinidos con permisos editables. Sin accesos de más, sin configuración compleja.</p>
       </div>
 
       <div class="pos-roles-grid">
-
         <div class="pos-role-card pos-role-admin fade-in">
-          <div class="pos-role-top">
-            <span class="pos-role-badge pos-role-badge-admin">Admin</span>
-          </div>
-          <h4 class="pos-role-title">Acceso total</h4>
-          <ul class="pos-role-list">
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Configuración del sistema</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gestión de usuarios</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Reportes y exportaciones</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Todas las sucursales</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Compras y proveedores</li>
+          <span class="pos-role-badge">Admin</span>
+          <h3 class="pos-role-title">Acceso total</h3>
+          <ul class="pos-role-list" role="list">
+            <li class="pos-role-yes">Configuración del sistema</li>
+            <li class="pos-role-yes">Gestión de usuarios</li>
+            <li class="pos-role-yes">Reportes y exportaciones</li>
+            <li class="pos-role-yes">Todas las sucursales</li>
+            <li class="pos-role-yes">Compras y proveedores</li>
           </ul>
         </div>
 
         <div class="pos-role-card fade-in">
-          <div class="pos-role-top">
-            <span class="pos-role-badge">Supervisor</span>
-          </div>
-          <h4 class="pos-role-title">Operación y control</h4>
-          <ul class="pos-role-list">
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Productos y stock</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Compras y proveedores</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Reportes</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Transferencias entre sucursales</li>
-            <li class="pos-role-item pos-role-no"><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Configuración del sistema</li>
+          <span class="pos-role-badge">Supervisor</span>
+          <h3 class="pos-role-title">Operación y control</h3>
+          <ul class="pos-role-list" role="list">
+            <li class="pos-role-yes">Productos y stock</li>
+            <li class="pos-role-yes">Compras y proveedores</li>
+            <li class="pos-role-yes">Reportes</li>
+            <li class="pos-role-yes">Transferencias entre sucursales</li>
+            <li class="pos-role-no">Configuración del sistema</li>
           </ul>
         </div>
 
         <div class="pos-role-card fade-in">
-          <div class="pos-role-top">
-            <span class="pos-role-badge">Cajero</span>
-          </div>
-          <h4 class="pos-role-title">Ventas y caja</h4>
-          <ul class="pos-role-list">
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Terminal de ventas</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Apertura y cierre de caja</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Consulta de stock</li>
-            <li class="pos-role-item pos-role-no"><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Reportes</li>
-            <li class="pos-role-item pos-role-no"><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Gestión de productos</li>
+          <span class="pos-role-badge">Cajero</span>
+          <h3 class="pos-role-title">Ventas y caja</h3>
+          <ul class="pos-role-list" role="list">
+            <li class="pos-role-yes">Terminal de ventas</li>
+            <li class="pos-role-yes">Apertura y cierre de caja</li>
+            <li class="pos-role-yes">Consulta de stock</li>
+            <li class="pos-role-no">Reportes</li>
+            <li class="pos-role-no">Gestión de productos</li>
           </ul>
         </div>
 
         <div class="pos-role-card fade-in">
-          <div class="pos-role-top">
-            <span class="pos-role-badge">Vendedor</span>
-          </div>
-          <h4 class="pos-role-title">Solo ventas</h4>
-          <ul class="pos-role-list">
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Terminal de ventas</li>
-            <li class="pos-role-item pos-role-yes"><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Consulta de stock</li>
-            <li class="pos-role-item pos-role-no"><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Caja</li>
-            <li class="pos-role-item pos-role-no"><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Reportes</li>
-            <li class="pos-role-item pos-role-no"><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Productos</li>
+          <span class="pos-role-badge">Vendedor</span>
+          <h3 class="pos-role-title">Solo ventas</h3>
+          <ul class="pos-role-list" role="list">
+            <li class="pos-role-yes">Terminal de ventas</li>
+            <li class="pos-role-yes">Consulta de stock</li>
+            <li class="pos-role-no">Caja</li>
+            <li class="pos-role-no">Reportes</li>
+            <li class="pos-role-no">Productos</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ===== CTA / CONTACTO ===== -->
-  <section class="pos-cta-section" id="contacto">
-    <div class="pos-container">
-      <div class="pos-cta-box fade-in">
-        <div class="pos-cta-glow" aria-hidden="true"></div>
-        <span class="pos-tag pos-tag-white">Demo gratuita</span>
+  <section class="py-section section-alt" id="contacto">
+    <div class="section-container">
+      <div class="pos-cta-panel fade-in">
+        <span class="product-tag">Demo gratuita</span>
         <h2 class="pos-cta-title">¿Lo querés ver<br>en tu negocio?</h2>
         <p class="pos-cta-sub">Coordinamos una demo, sin cargo y sin compromiso.</p>
 
-        <form class="pos-form" id="posContactForm" action="https://formspree.io/f/xjgdygqb" method="POST">
+        <form class="pos-form" id="contact-form" action="https://formspree.io/f/xjgdygqb" method="POST">
           <div class="pos-form-row">
             <div class="pos-form-field">
               <label for="pos-name" class="visually-hidden">Tu nombre</label>
@@ -372,13 +327,14 @@
             <label for="pos-business" class="visually-hidden">¿Qué tipo de negocio tenés?</label>
             <input type="text" id="pos-business" name="business" placeholder="¿Qué tipo de negocio tenés?">
           </div>
-          <button type="submit" id="pos-submit" class="pos-submit-btn">
-            Pedir demo gratuita <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          <button type="submit" id="submit-btn" class="submit-btn">
+            Pedir demo gratuita
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
         </form>
 
         <p class="pos-cta-note">
-          <i class="bi bi-geo-alt" aria-hidden="true"></i>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Funes, Santa Fe · También por videollamada
         </p>
       </div>
@@ -388,24 +344,19 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="pos-footer" role="contentinfo">
-    <div class="pos-container pos-footer-inner">
-      <div class="pos-footer-left">
-        <a href="index.html" class="pos-footer-brand" aria-label="Volver a FunesByte">
-          <div class="pos-logo-icon">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM11.5 9v6M8.5 12h6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <span>FunesByte</span>
-        </a>
-        <span class="pos-footer-sep" aria-hidden="true">·</span>
-        <span class="pos-footer-product">FunesPOS</span>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-bottom">
+      <div class="section-container footer-bottom-inner">
+        <p>© 2026 FunesByte · FunesPOS · Ignacio D. López</p>
+        <div class="footer-legal">
+          <a href="index.html">FunesByte</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="terminos.html">Términos</a>
+        </div>
       </div>
-      <p class="pos-footer-copy">© 2026 FunesByte · Ignacio D. López</p>
     </div>
   </footer>
 
-  <script src="funespos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

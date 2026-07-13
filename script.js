@@ -3,69 +3,80 @@
 // ============================================================
 
 // ---- NAVBAR: scroll effect ----
-const navbar        = document.getElementById('navbar');
-const mobileBtn     = document.getElementById('mobile-menu-btn');
-const mobileMenu    = document.getElementById('mobile-menu');
-const mobileLinks   = document.querySelectorAll('.mobile-link, .mobile-cta');
+const navbar     = document.getElementById('navbar');
+const mobileBtn  = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
+  navbar.classList.toggle('scrolled', window.scrollY > 24);
 }, { passive: true });
 
 // ---- MOBILE MENU ----
-function closeMobileMenu() {
-  mobileMenu.classList.add('hidden');
-  mobileBtn.setAttribute('aria-expanded', 'false');
-  mobileBtn.querySelector('i').className = 'bi bi-list';
+if (mobileBtn && mobileMenu) {
+  const iconMenu  = mobileBtn.querySelector('.icon-menu');
+  const iconClose = mobileBtn.querySelector('.icon-close');
+
+  const setMenu = (open) => {
+    mobileMenu.classList.toggle('hidden', !open);
+    mobileBtn.setAttribute('aria-expanded', String(open));
+    mobileBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    iconMenu.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+  };
+
+  mobileBtn.addEventListener('click', () => {
+    setMenu(mobileMenu.classList.contains('hidden'));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => setMenu(false))
+  );
+
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target)) setMenu(false);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setMenu(false);
+  });
 }
-
-mobileBtn.addEventListener('click', () => {
-  const isOpen = !mobileMenu.classList.contains('hidden');
-  if (isOpen) {
-    closeMobileMenu();
-  } else {
-    mobileMenu.classList.remove('hidden');
-    mobileBtn.setAttribute('aria-expanded', 'true');
-    mobileBtn.querySelector('i').className = 'bi bi-x-lg';
-  }
-});
-
-mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
-
-// Close on outside click
-document.addEventListener('click', (e) => {
-  if (!navbar.contains(e.target)) closeMobileMenu();
-});
 
 // ---- ACTIVE NAV LINK ----
 const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link');
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-      });
-    }
-  });
-}, { threshold: 0.3, rootMargin: '-80px 0px -30% 0px' });
+if (sections.length && navLinks.length) {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px -30% 0px' });
 
-sections.forEach(s => sectionObserver.observe(s));
+  sections.forEach(s => sectionObserver.observe(s));
+}
 
-// ---- FADE-IN ON SCROLL ----
+// ---- SCROLL REVEAL ----
 const fadeEls = document.querySelectorAll('.fade-in');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+if (reducedMotion || !('IntersectionObserver' in window)) {
+  fadeEls.forEach(el => el.classList.add('visible'));
+} else {
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-fadeEls.forEach(el => fadeObserver.observe(el));
+  fadeEls.forEach(el => fadeObserver.observe(el));
+}
 
 // ---- CONTACT FORM ----
 const form      = document.getElementById('contact-form');
@@ -76,26 +87,24 @@ if (form && submitBtn) {
     e.preventDefault();
 
     const originalHTML = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span style="opacity:.7">Enviando...</span>';
+    submitBtn.textContent = 'Enviando…';
     submitBtn.disabled = true;
 
     try {
-      const res = await fetch('https://formspree.io/f/xjgdygqb', {
+      const res = await fetch(form.action, {
         method: 'POST',
         body: new FormData(this),
         headers: { 'Accept': 'application/json' }
       });
 
-      if (res.ok) {
-        submitBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> ¡Mensaje enviado!';
-        submitBtn.style.background = '#16a34a';
-        form.reset();
-      } else {
-        throw new Error('Server error');
-      }
+      if (!res.ok) throw new Error('Server error');
+
+      submitBtn.textContent = '✓ ¡Mensaje enviado!';
+      submitBtn.style.background = '#1a7f4b';
+      form.reset();
     } catch {
-      submitBtn.innerHTML = '<i class="bi bi-exclamation-triangle-fill"></i> Error al enviar. Intentá de nuevo.';
-      submitBtn.style.background = '#dc2626';
+      submitBtn.textContent = 'Error al enviar. Intentá de nuevo.';
+      submitBtn.style.background = '#b3261e';
     } finally {
       setTimeout(() => {
         submitBtn.innerHTML = originalHTML;
