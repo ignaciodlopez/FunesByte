@@ -774,7 +774,7 @@ a { color: inherit; }
               0 16px 40px rgba(0, 0, 0, 0.09);
 }
 
-.tech-icon { font-size: 2.25rem; line-height: 1; }
+.tech-icon { width: 2.25rem; height: 2.25rem; }
 .tech-name { font-size: 0.8438rem; font-weight: 500; color: var(--ink-soft); }
 
 /* ============================================================
