@@ -1,0 +1,16 @@
+{
+  "name": "FunesByte",
+  "short_name": "FunesByte",
+  "description": "Desarrollo de software a medida y soluciones tecnológicas escalables.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7C3AED",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

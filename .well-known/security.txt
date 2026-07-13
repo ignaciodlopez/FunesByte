@@ -1,0 +1,6 @@
+Contact: mailto:funesbyte@gmail.com
+Contact: https://wa.me/message/LMYMGHM7BRU4E1
+Preferred-Languages: es
+Policy: https://funesbyte.com/privacidad.html
+Canonical: https://funesbyte.com/.well-known/security.txt
+Expires: 2027-01-01T00:00:00Z
